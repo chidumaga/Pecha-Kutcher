@@ -1,0 +1,20 @@
+<h1 style="font-family: Helvetica; font-size: 60px; text-align: center; background-color: #3498db">Pecha Kutcher!</h1>
+
+<div style="margin-left: 500px; margin-top: 200px;">
+<form action="/" method="post">
+<input type="text" name="name" placeholder="Your name">
+<input type="text" name="subject" placeholder="Your game">
+<button>Add</button>
+</form>
+</div>
+
+</br>
+</br>
+
+<% if @name %>
+<p style="font-family: Helvetica; text-align: center; color: #e74c3c">Thanks <%= @name %>, looking forward to your chatter</p>
+<% end %>
+
+</br>
+</br>
+<a href="/next" style="margin-left: 585px; font-family: Helvetica; text-decoration: none; color: #1c1c1c">Who's Next?</a>
