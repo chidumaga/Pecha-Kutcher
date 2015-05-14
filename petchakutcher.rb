@@ -1,6 +1,6 @@
 class Participant
 
-  def initialize(name,subject)
+  def initialize name, subject
     @name = name
     @name[0] = @name[0].capitalize
     @subject = subject
@@ -8,11 +8,9 @@ class Participant
   end
 
 attr_accessor :name
-attr_accessor :subject
+attr_accessor :subject #why are these attr_accessors
 
 end
-
-
 
 class PetchaKutcher
 
@@ -21,7 +19,7 @@ class PetchaKutcher
   end
 
 
-  def add_participant(name,subject)
+  def add_participant name, subject
     particiant1 = Participant.new name, subject
     @pk << particiant1
     @pk.shuffle!
@@ -76,11 +74,9 @@ pk1 = PetchaKutcher.new
 # # #pk1.list_participants
 # pk1.save_participants("pk.txt")
 
-pk1.load_participants("pk.txt")
+# pk1.load_participants("pk.txt")
 
-p pk1.pick_next
-p pk1.pick_next
-p pk1.pick_next
-p pk1.pick_next
-
-
+# p pk1.pick_next
+# p pk1.pick_next
+# p pk1.pick_next
+# p pk1.pick_next
