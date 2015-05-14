@@ -12,5 +12,9 @@ Feature: I can moderate Pecha Kucha night at Makers
 
   Scenario: Finding out who the next speaker is
     Given I am on the homepage
-    When I click the "Who's Next?" link
+    When I fill in "name" with "Tim"
+    And I fill in "subject" with "Lewisham"
+    And I press "Add"
+    And I click the "Who's Next?" link
     Then I am redirected to the "next" page
+    Then I see "Tim"
