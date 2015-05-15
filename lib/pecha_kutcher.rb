@@ -2,6 +2,10 @@ require 'sinatra/base'
 require './lib/petchakutcher'
 
 class Pecha_Kutcher < Sinatra::Base
+
+  set :public_folder, Proc.new { File.join('..','public') }
+  puts File.join(root, public_folder)
+
   get '/' do
     @@pechkuch = PetchaKutcher.new
     erb :index

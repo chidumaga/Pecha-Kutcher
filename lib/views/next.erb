@@ -1,1 +1,17 @@
-<p style="text-align: center; font-family: Helvetica; font-size: 40px; margin-top: 200px"><%= @return_text %></p>
+<div id="loading">
+  <img id="loading-image" src="/images/ashton-kutcher.jpg" alt="Loading..."/>
+</div>
+
+<div id="next-to-load">
+  <p style="text-align: center; font-family: Helvetica; font-size: 40px; margin-top: 200px"><%= @return_text %></p>
+  <a href="/next" style="margin-left:585px; font-family: Helvetica; text-decoration: underline; color: #1c1c1c">Who's Next?</a>
+</div>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script>
+  $('#next-to-load').hide(0);
+  $('#next-to-load').delay(3000).show(0);
+  $('#loading').delay(3000).hide(0);
+</script>
