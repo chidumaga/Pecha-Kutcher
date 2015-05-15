@@ -1,1 +1,17 @@
-body {background-color: red;}
+h1 {font-family: Helvetica;
+    font-size: 60px;
+    text-align: center;
+    background-color: #3498db;
+   }
+
+p { font-family: Helvetica; text-align: center; color: #e74c3c; }
+
+a {margin-left: 585px; font-family: Helvetica; text-decoration: underline; color: #1c1c1c;}
+
+#participant-form{ margin-left: 500px; margin-top: 200px; }
+
+#loading { margin-left: 400px; margin-top: 200px; }
+
+#next-to-load p { text-align: center; font-family: Helvetica; font-size: 40px; margin-top: 200px; color: #000;}
+
+#next-to-load a { margin-left:585px; font-family: Helvetica; text-decoration: underline; color: #1c1c1c }

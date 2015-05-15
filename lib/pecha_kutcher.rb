@@ -8,17 +8,21 @@ class Pecha_Kutcher < Sinatra::Base
 
   get '/' do
     @@pechkuch = PetchaKutcher.new
+    @@pechkuch.load_participants("pk.txt")
     erb :index
   end
 
   post '/' do
     @name = params[:name]
     @@pechkuch.add_participant params[:name], params[:subject]
+    @@pechkuch.save_participants("pk.txt")
     erb :index
   end
 
   get '/next' do
+    @rand_num = rand(1..10)
     @return_text = @@pechkuch.pick_next
+    @@pechkuch.save_participants("pk.txt")
     erb :next
   end
 

@@ -1,9 +1,9 @@
 class Participant
 
   def initialize name, subject
-    @name = name
+    @name = name.downcase
     @name[0] = @name[0].capitalize
-    @subject = subject
+    @subject = subject.downcase
     @subject[0] = @subject[0].capitalize
   end
 
@@ -39,14 +39,17 @@ class PetchaKutcher
 
 
   def load_participants(filename)
-    txt = open(filename)
-    while !txt.eof?
-      a, b = txt.readline.split("%")
-      b = b[0..-3]  #get rid of new line chars
-      particiant1 = Participant.new a, b
-      @pk << particiant1
+    if File.file?(filename)
+      txt = open(filename)
+      while !txt.eof?
+        a, b = txt.readline.split("%")
+        #b = b[0..-3]  #get rid of new line chars
+        b.chomp!
+        particiant1 = Participant.new a, b
+        @pk << particiant1
+      end
+      @pk.shuffle
     end
-    @pk.shuffle
   end
 
 
