@@ -8,10 +8,14 @@ p { font-family: Helvetica; text-align: center; color: #e74c3c; }
 
 a {margin-left: 585px; font-family: Helvetica; text-decoration: underline; color: #1c1c1c;}
 
-#participant-form{ margin-left: 500px; margin-top: 200px; }
+#participant-form{ margin-left: 25%; margin-top: 200px; }
 
-#loading { margin-left: 400px; margin-top: 200px; }
+#loading img{ margin-left: 400px; margin-top: 40px; }
+#loading p{text-align: center; color: #000; font-size: 25px;}
 
-#next-to-load p { text-align: center; font-family: Helvetica; font-size: 40px; margin-top: 200px; color: #000;}
+#next-to-load p { text-align: center; font-family: Helvetica; font-size: 40px; margin-top: 70px; color: #000;}
 
 #next-to-load a { margin-left:585px; font-family: Helvetica; text-decoration: underline; color: #1c1c1c }
+
+input { width: 300px; height: 30px; border-radius: 0.2em; box-shadow: none; font-size: 20px;}
+button {height: 30px; background-color: #fff;}
